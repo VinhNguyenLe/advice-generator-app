@@ -1,0 +1,30 @@
+@media (max-width: 540px){
+    .desktop{
+        display: none;
+    }
+
+    .mobile{
+        filter :brightness(0) invert(1);
+        width: 100%;
+    }
+
+    .box{
+        width: 90%;
+        padding: 50px 24px;
+    }
+
+    .img-container::before, .img-container::after{
+        display: none;
+    }
+}
+
+@media (min-width: 541px){
+    .mobile{
+        display: none;
+    }
+    
+    .btn{
+        transform: translateX(-42%);
+    }
+
+}

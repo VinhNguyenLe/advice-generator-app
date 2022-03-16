@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap');
+
+:root{
+    /* ### Primary */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+/* ### Neutral */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--dark-grayish-blue);
+}
+
+.container{
+    width: 100%;
+    height: calc(100% - 48px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+h4, h4 span{
+    text-align: center;
+    font-weight: 800;
+    color: var(--neon-green);
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+
+.quote, .quote span{
+    font-weight: 800;
+    margin: 36px 0;
+    font-size: 28px;
+    color: var(--light-cyan);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.box{
+    width: 544px;
+    background-color: var(--grayish-blue);
+    padding: 50px 55px;
+    border-radius: 36px;
+    position: relative;
+}
+
+.img-container{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.img-container::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: var(--light-cyan);
+    width: 45%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-container::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: var(--light-cyan);
+    width: 45%;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.img-container img{
+    height: 100%;
+}
+
+.btn{
+    width: 75px;
+    height: 75px;
+    background-color: var(--neon-green);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+.btn:hover{
+    box-shadow: 0px 0px 20px 8px var(--neon-green);
+}
+
+.btn img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.attribution{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 48px;
+    text-align: center;
+    padding: 12px 0;
+    color: var(--light-cyan);
+}
+
+.attribution a{
+    color: var(--neon-green);
+    text-decoration: none;
+}
